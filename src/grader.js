@@ -78,7 +78,11 @@ function testCommonEnd() {
 
       if (expected !== actual) {
         console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
         console.log(`  - call: ${functionCall}`);
+=======
+        console.log(`  - call: commonEnd(${format(a)}, ${format(b)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
         console.log(`  - expected: ${expected}`);
         console.log(`  - actual: ${actual}\n`);
       } else {
@@ -110,7 +114,11 @@ function testEndsMeet() {
 
       if (!isEqual(expected, actual)) {
         console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
         console.log(`  - call: ${functionCall}`);
+=======
+        console.log(`  - call: endsMeet(${format(values)}, ${n})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
         console.log(`  - expected: ${format(expected)}`);
         console.log(`  - actual: ${format(actual)}\n`);
       } else {
@@ -141,7 +149,11 @@ function testDifference() {
 
     if (expected !== actual) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: difference(${format(numbers)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${expected}`);
       console.log(`  - actual: ${actual}\n`);
     } else {
@@ -171,7 +183,11 @@ function testMax() {
 
     if (expected !== actual) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: max(${format(numbers)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${expected}`);
       console.log(`  - actual: ${actual}\n`);
     } else {
@@ -201,7 +217,11 @@ function testMiddle() {
 
     if (!isEqual(expected, actual)) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: middle(${format(values)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${format(expected)}`);
       console.log(`  - actual: ${format(actual)}\n`);
     } else {
@@ -231,7 +251,11 @@ function testIncreasing() {
 
     if (expected !== actual) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: increasing(${format(numbers)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${expected}`);
       console.log(`  - actual: ${actual}\n`);
     } else {
@@ -262,7 +286,11 @@ function testEverywhere() {
 
       if (expected !== actual) {
         console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
         console.log(`  - call: ${functionCall}`);
+=======
+        console.log(`  - call: everywhere(${format(values)}, ${x})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
         console.log(`  - expected: ${expected}`);
         console.log(`  - actual: ${actual}\n`);
       } else {
@@ -293,7 +321,11 @@ function testConsecutive() {
 
     if (expected !== actual) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: consecutive(${format(numbers)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${expected}`);
       console.log(`  - actual: ${actual}\n`);
     } else {
@@ -323,7 +355,11 @@ function testBalance() {
 
     if (expected !== actual) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: balance(${format(numbers)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${expected}`);
       console.log(`  - actual: ${actual}\n`);
     } else {
@@ -353,7 +389,11 @@ function testClumps() {
 
     if (expected !== actual) {
       console.log(`Test Case ${tc + 1} -- Fail.`);
+<<<<<<< HEAD
       console.log(`  - call: ${functionCall}`);
+=======
+      console.log(`  - call: clumps(${format(values)})`);
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
       console.log(`  - expected: ${expected}`);
       console.log(`  - actual: ${actual}\n`);
     } else {
@@ -376,11 +416,19 @@ function testClumps() {
  */
 
 function isEqual(expected, actual) {
+<<<<<<< HEAD
   if (!expected && !actual) {
     return true;
   } else if ((expected && !actual) || (!expected && actual)) {
     return false;
   } else if (expected.length !== actual.length) {
+=======
+  if (expected && !actual || !expected && actual) {
+    console.log("one's defined, one's not");
+    return false;
+  } else if (expected.length !== actual.length) {
+    console.log("different lengths");
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
     return false;
   }
 
@@ -407,6 +455,7 @@ function format(arr) {
 
   let formatted = "";
   for (let i = 0; i < arr.length; i++) {
+<<<<<<< HEAD
     if (typeof arr[i] === "string") {
       formatted = formatted + (i === arr.length - 1 ? `\"${arr[i]}\"` : `\"${arr[i]}\", `);
     } else if (typeof arr[i] === "number") {
@@ -416,6 +465,16 @@ function format(arr) {
     } else {
       console.log(">>>>>>>>>>>>>>>>>>>>> " + arr[i]);
       console.log(">>>>>>>>>>>>>>>>>>>>> " + typeof arr[i]);
+=======
+    if (arr[i]) {
+      if (typeof arr[i] === "string") {
+        formatted = formatted + ((i === arr.length - 1) ? `\"${arr[i]}\"` : `\"${arr[i]}\", `);
+      } else if (typeof arr[i] === "number") {
+        formatted = formatted + ((i === arr.length - 1) ? `${arr[i]}` : `${arr[i]}, `);
+      }
+    } else {
+      formatted = formatted + ((i === arr.length - 1) ? "undefined" : "undefined, ");
+>>>>>>> 2b1752bbf0dd5371f8adf378ea7e5eaa0c8b45a8
     }
   }
 
